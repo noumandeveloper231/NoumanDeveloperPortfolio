@@ -1,6 +1,6 @@
 import React from 'react';
 import assets from '../../assets/assets';
-import { Mail, Phone, MapPin, ChevronRight, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight, Download } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -44,7 +44,7 @@ const AboutMe = () => {
                     <div data-aos="fade-up" data-aos-delay="200" className="flex flex-col md:flex-row flex-wrap gap-4">
                         <Link href="/about" className="">
                             <button className="w-full md:w-auto flex items-center gap-2 justify-center md:justify-start">
-                                More About Me <ChevronRight size={20} />
+                                More About Me <ArrowUpRight className="text-[var(--white-color)] transition-transform group-hover:translate-x-1" />
                             </button>
                         </Link>
 

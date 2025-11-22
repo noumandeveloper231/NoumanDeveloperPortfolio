@@ -8,7 +8,7 @@ import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 
 // UI icons (from lucide-react)
-import { ChevronRight, ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
 // Social media icons (from react-icons/fa)
 import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube, } from "react-icons/fa";
@@ -38,10 +38,10 @@ const Home = () => {
           </span></h2>
           <div className='flex flex-col md:flex-row justify-center lg:justify-start  mt-8 items-center gap-4'>
             <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
-              Hire Me <ChevronRight size={20}/>
+              Hire Me <ArrowUpRight className="text-[var(--white-color)] transition-transform group-hover:translate-x-1" />
             </button>
             <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
-              View Projects <ChevronRight size={20}/>
+              View Projects <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />
             </button>
           </div>
           <div className='flex items-center justify-center lg:justify-start flex-wrap mt-2 gap-4'>
