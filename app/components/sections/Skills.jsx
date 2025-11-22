@@ -12,7 +12,7 @@ const Skills = () => {
                     Skills
                 </h1>
             </div>
-            <p className="text-center my-4">
+            <p className="text-center my-4 text-gray-400 text-lg leading-relaxed">
                 Things are needed because something is missing, and it must follow certain rules
             </p>
             <div className='mt-5 grid grid-cols-1 md:grid-cols-2 mx-auto gap-8'>

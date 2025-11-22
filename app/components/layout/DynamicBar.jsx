@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Dice1 } from 'lucide-react';
 import ThemeToggle from '../reusable/DarkModeToggle';
 
 const DynamicBar = () => {
@@ -15,6 +14,13 @@ const DynamicBar = () => {
         { name: "About", link: "/about" },
         { name: "Services", link: "/services" },
     ];
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }, []);
 
     const [expanded, setExpanded] = useState(false);
 
@@ -29,7 +35,7 @@ const DynamicBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY >= 100) setPop(true);
+            if (window.scrollY >= 200) setPop(true);
             else {
                 setPop(false)
                 setExpanded(false)

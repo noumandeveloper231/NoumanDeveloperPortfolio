@@ -82,35 +82,18 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
 }
-
+  
 button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
-  background-color: var(--primary-color);
-  border: 1px solid transparent;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: clamp(0.75rem, 0.9vw, 1rem);
-  transition: all 0.3s ease-in-out;
+  @apply py-2 px-4 rounded-md bg-[var(--primary-color)] border border-transparent text-white cursor-pointer font-medium text-[clamp(0.75rem,0.9vw,1rem)] transition-all duration-300 ease-in-out;
 }
 
 button:hover {
-  background-color: #6f0f9bad;
-  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.293);
-  transform: translateY(-3px);
-  color: var(--primary-color);
+  @apply bg-[#6f0f9bad] shadow-[5px_5px_10px_rgba(128,128,128,0.293)] -translate-y-[3px] text-[var(--primary-color)];
 }
 
 .btn-secondary {
-  padding: 0.5rem 2rem;
-  border-radius: 0.3rem;
-  background-color: transparent !important;
-  border: 1px solid var(--primary-color);
+  @apply py-2 px-4 rounded-md bg-transparent border border-[var(--primary-color)] cursor-pointer font-medium text-[clamp(0.75rem,0.9vw,1rem)] transition-all duration-300 ease-in-out;
   color: var(--white-color);
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease-in-out;
 }
 
 a:hover {

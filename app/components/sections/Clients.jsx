@@ -6,7 +6,7 @@ import { Book, Clock, HeadphonesIcon } from "lucide-react";
 
 const Clients = () => {
   return (
-    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] p-10 sm:p-12 md:p-14  rounded-2xl whitespace-nowrap">
+    <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] p-8 md:p-10 rounded-2xl whitespace-nowrap">
       <div data-aos="fade-up" className="bg-[var(--accent)]/30 shadow-2xl hover:-translate-y-2 transition-all cursor-pointer p-8 rounded-2xl flex flex-col gap-4 items-center ">
         <div className="p-6 hover:scale-110 transition-all cursor-pointer rounded-full bg-green-500/30 shadow-xl">
           <RiEmotionHappyLine size={50} className="text-green-500" />

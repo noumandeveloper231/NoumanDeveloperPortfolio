@@ -17,10 +17,11 @@ import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube, } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 import Services from './components/sections/Services';
+import ContactMe from './components/sections/ContactMe';
 
 const Home = () => {
   return (
-    <main className='w-full relative min-h-screen text-[var(--white-color)]'>
+    <main className='max-w-7xl mx-auto w-full relative min-h-screen text-[var(--white-color)]'>
       <section className="w-[90%] mx-auto py-20 px-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div
           data-aos='fade-right'
@@ -35,12 +36,12 @@ const Home = () => {
           <h2 className='flex text-xl md:text-2xl justify-center lg:justify-start w-full font-light mt-4'>Experties in <span className='text-[var(--primary-color)] underline ml-2 underline-offset-8 font-semibold'>
             <TypedText strings={["React.js", "MongoDB", "HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "TailwindCSS"]} />
           </span></h2>
-          <div className='flex justify-center lg:justify-start  mt-8 items-center gap-4'>
-            <button className='text-[var(--white-color)] flex items-center gap-2'>
-              Hire Me <ChevronRight />
+          <div className='flex flex-col md:flex-row justify-center lg:justify-start  mt-8 items-center gap-4'>
+            <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
+              Hire Me <ChevronRight size={20}/>
             </button>
-            <button className='bg-white btn-secondary text-[var(--primary-color)] hover:text-white flex items-center gap-2'>
-              View Projects <ChevronRight />
+            <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
+              View Projects <ChevronRight size={20}/>
             </button>
           </div>
           <div className='flex items-center justify-center lg:justify-start flex-wrap mt-2 gap-4'>
@@ -117,7 +118,7 @@ const Home = () => {
       </section>
 
       {/* Skills */}
-      <section className='w-[90%] mx-auto mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
+      <section className='w-[95%] mx-auto mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
         <Skills />
       </section>
 
@@ -129,6 +130,11 @@ const Home = () => {
       {/* Services */}
       <section className='w-[95%] mx-auto mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
         <Services />
+      </section>
+
+      {/* Contact Form */}
+      <section className='w-[95%] mx-auto mt-10 sm:mt-12 md:mt-14 lg:mt-16'>
+        <ContactMe />
       </section>
     </main>
   )

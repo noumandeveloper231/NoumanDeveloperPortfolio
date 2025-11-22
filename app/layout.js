@@ -2,6 +2,7 @@ import { Poppins, Oswald } from "next/font/google";
 import "./globals.css";
 import AOSWrapper from "./components/reusable/AOSWrapper";
 import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"], weight: ["400", '500', "600", "700"]
@@ -18,15 +19,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* ✅ Preconnect for performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <Header />
-        <AOSWrapper>{children}</AOSWrapper>
+        <main className="flex-1">
+          <AOSWrapper>{children}</AOSWrapper>
+        </main>
+        <Footer />
       </body>
     </html>
   );
