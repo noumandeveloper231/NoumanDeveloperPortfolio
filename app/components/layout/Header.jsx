@@ -31,10 +31,10 @@ const Header = () => {
         href="/contact"
         className="relative px-5 py-3 flex items-center gap-3 border border-[var(--accent)] rounded-2xl text-[var(--white-color)] bg-[rgba(255,255,255,0.05)] backdrop-blur-sm shadow-md transition-all hover:shadow-xl hover:scale-105 hover:bg-[var(--accent)] hover:text-black"
       >
-        Contact Me <ArrowUpRight className="transition-transform group-hover:translate-x-1" />
+        Contact Me <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />
       </Link>
     </header>
   )
 }
 
-export default Header
+export default Header;

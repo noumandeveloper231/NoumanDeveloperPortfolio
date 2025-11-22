@@ -1,13 +1,18 @@
 @import "tailwindcss";
+
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+
+}
+
+html,
+body {
   scroll-behavior: smooth;
 }
 
 :root {
-  --primary-color: #9c27b0;
-  /* Brighter purple → contrast ~5:1 on dark bg */
+  --primary-color: #ad46ff;
   --secondary-color: #121212;
   /* Deeper dark → improves contrast with white/purple */
   --white-color: #ffffff;
@@ -18,7 +23,31 @@
   /* Slightly darker than #1f1f1f */
   --accent: #55595f;
   /* Lighter gray → works on dark bg */
+  --primary-2: #c685fc;
+
+  --dark-from: #242424;
+
+  --dark-to: #2d2d2d;
 }
+
+.light-mode {
+  --primary-color: #ad46ff;
+  /* Keep purple */
+  --secondary-color: #ffffff;
+  /* Main background → white */
+  --white-color: #000000;
+  /* Text color → black */
+  --black-color: #ffffff;
+  /* Can be used for overlays or reversed text */
+  --bg: #f5f5f5;
+  /* Light background instead of dark */
+  --accent: #d1d1d1;
+  /* Soft gray for borders, shadows, subtle elements */
+  --primary-2: #c685fc;
+  --dark-from: #e6e6e6;
+  --dark-to: #e0e0e0;
+}
+
 
 /* Thin Modern Scrollbar (Desktop) */
 ::-webkit-scrollbar {
@@ -45,7 +74,7 @@ html {
   scroll-behavior: smooth;
 }
 
-img{
+img {
   pointer-events: none;
 }
 
@@ -59,6 +88,7 @@ button {
   border-radius: 0.3rem;
   background-color: var(--primary-color);
   border: 1px solid transparent;
+  color: #fff;
   cursor: pointer;
   font-weight: 500;
   font-size: clamp(0.75rem, 0.9vw, 1rem);
@@ -69,27 +99,22 @@ button:hover {
   background-color: #6f0f9bad;
   box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.293);
   transform: translateY(-3px);
+  color: var(--primary-color);
 }
 
 .btn-secondary {
   padding: 0.5rem 2rem;
   border-radius: 0.3rem;
-  background-color: var(--white-color);
+  background-color: transparent !important;
   border: 1px solid var(--primary-color);
+  color: var(--white-color);
   cursor: pointer;
   font-weight: 500;
   transition: all 0.3s ease-in-out;
 }
 
-.btn-secondary-hover {
-  background-image: linear-gradient(120deg, var(--primary-color), var(--secondary-color));
-  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.293);
-  transform: translateY(-3px);
-  color: var(--white-color);
-}
-
 a:hover {
-  color: var(--secondary-color);
+  color: var(--white-color);
 }
 
 h1 {
@@ -133,4 +158,96 @@ h1.section-heading::after {
 
 .bg-dark-gradient {
   background: linear-gradient(to bottom right, #242424, #2d2d2d);
+}
+
+.bg-dark-gradient {
+  background: linear-gradient(to bottom right, #f5f5f5, #e0e0e0);
+}
+
+
+@media (max-width: 767px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.font-oswald {
+  font-family: "Oswald", sans-serif;
+}
+
+.orbit-system {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 50px auto;
+  border-radius: 50%;
+}
+
+/* Orbit rings */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgb(82, 82, 82);
+  /* Orbit path */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 5s linear infinite;
+  /* rotation speed */
+}
+
+/* Different radii for orbits */
+.orbit1 {
+  width: 210px;
+  height: 210px;
+  animation-duration: 4s;
+}
+
+.orbit2 {
+  width: 330px;
+  height: 330px;
+  animation-duration: 6s;
+}
+
+.orbit3 {
+  width: 450px;
+  height: 450px;
+  animation-duration: 8s;
+}
+
+/* Planet styles */
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Planet colors */
+.planet1 {
+  background-color: #ad46ff;
+}
+
+.planet2 {
+  background-color: #c685fc;
+}
+
+.planet3 {
+  background-color: #e0aaff;
+}
+
+/* Orbit rotation animation */
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

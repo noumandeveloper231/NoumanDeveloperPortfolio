@@ -16,7 +16,7 @@ const Skills = () => {
                 Things are needed because something is missing, and it must follow certain rules
             </p>
             <div className='mt-5 grid grid-cols-1 md:grid-cols-2 mx-auto gap-8'>
-                <div data-aos="fade-up" data-aos-duration="500" className='p-3 md:p-6 bg-dark-gradient rounded-xl shadow-2xl '>
+                <div data-aos="fade-up" data-aos-duration="500" className='p-3 md:p-6 bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] rounded-xl shadow-2xl '>
                     <h2 className="text-2xl relative font-semibold after:absolute after:-bottom-3 after:bg-white after:h-1 after:w-20 after:left-0">
                         Front-end Development
                     </h2>
@@ -63,7 +63,7 @@ const Skills = () => {
                         </p>
                     </div>
                 </div>
-                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" className='p-3 md:p-6 bg-dark-gradient rounded-xl shadow-2xl'>
+                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" className='p-3 md:p-6 bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] rounded-xl shadow-2xl'>
                     <h2 className="text-2xl relative font-semibold after:absolute after:-bottom-3 after:bg-white after:h-1 after:w-20 after:left-0">
                         Back-end Development
                     </h2>
@@ -113,7 +113,7 @@ const Skills = () => {
             </div>
 
             {/* Frame Works */}
-            <div data-aos="zoom-in-up" className='p-3 mt-10 md:p-6 bg-dark-gradient rounded-xl shadow-2xl'>
+            <div data-aos="zoom-in-up" className='p-3 mt-10 md:p-6 bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] rounded-xl shadow-2xl'>
                 <h2 className="text-2xl relative font-semibold after:absolute after:-bottom-3 after:bg-white after:h-1 after:w-20 after:left-0">
                     FrameWorks
                 </h2>
