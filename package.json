@@ -7,7 +7,7 @@
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint",
-    "gitadd": "git add . && git commit -m \"update\" && git push origin main"
+    "gitadd": "git add . && git commit -m \"$1\" && git push origin main"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^15.5.4",
