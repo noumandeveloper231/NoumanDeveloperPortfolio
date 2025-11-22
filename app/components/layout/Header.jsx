@@ -35,7 +35,7 @@ const Header = () => {
       <div className='hidden md:block'>
         <DynamicBar />
       </div>
-      <div>
+      <div className='md:hidden'>
         <Sidebar />
       </div>
       <Link
