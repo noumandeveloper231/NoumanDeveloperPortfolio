@@ -3,6 +3,7 @@ import "./globals.css";
 import AOSWrapper from "./components/reusable/AOSWrapper";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const poppins = Poppins({
   subsets: ["latin"], weight: ["400", '500', "600", "700"]
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
           <AOSWrapper>{children}</AOSWrapper>
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
