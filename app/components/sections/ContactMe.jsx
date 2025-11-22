@@ -1,7 +1,19 @@
-import React from 'react';
+'use client';
+import React, { useEffect, useState, Suspense } from 'react';
 import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
+import { useSearchParams } from 'next/navigation';
 
-const ContactMe = () => {
+const ContactForm = () => {
+    const searchParams = useSearchParams();
+    const [subject, setSubject] = useState('');
+
+    useEffect(() => {
+        const subjectParam = searchParams.get('subject');
+        if (subjectParam) {
+            setSubject(subjectParam);
+        }
+    }, [searchParams]);
+
     return (
         <div className="py-10 flex flex-col items-center relative">
             <div className="overflow-y-hidden w-full text-center ">
@@ -102,6 +114,8 @@ const ContactMe = () => {
                                 <input
                                     type="text"
                                     placeholder="Project Inquiry"
+                                    value={subject}
+                                    onChange={(e) => setSubject(e.target.value)}
                                     className="w-full bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] rounded-xl py-3 pl-12 pr-4 text-[var(--white-color)] focus:outline-none focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] transition-all"
                                 />
                             </div>
@@ -127,6 +141,14 @@ const ContactMe = () => {
                 </div>
             </div>
         </div>
+    );
+};
+
+const ContactMe = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ContactForm />
+        </Suspense>
     );
 };
 
