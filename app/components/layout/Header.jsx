@@ -23,7 +23,14 @@ const Header = () => {
   return (
     <header className='w-full flex justify-between py-4 md:py-8 px-4 md:px-8 items-center'>
       <Link href={'/'}>
-        <Image className='w-40 md:w-52' src="/favicon.png" alt='Logo' width={200} height={150} />
+        <Image
+          src="/favicon.png"
+          alt="Logo"
+          width={160}
+          height={120}
+          className="w-40 md:w-52"
+        />
+
       </Link>
       <div className='hidden md:block'>
         <DynamicBar />
