@@ -73,7 +73,7 @@ const ProjectDetails = () => {
 
                 {/* Header */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-                    <div data-aos="fade-right">
+                    <div data-aos="fade-right" suppressHydrationWarning>
                         <div className="inline-block px-4 py-1 rounded-full border border-[var(--primary-color)] text-[var(--primary-color)] text-sm font-medium mb-4">
                             {project.category}
                         </div>
@@ -102,7 +102,7 @@ const ProjectDetails = () => {
                     </div>
 
                     {/* Project Info Cards */}
-                    <div className="grid grid-cols-2 gap-4" data-aos="fade-left">
+                    <div className="grid grid-cols-2 gap-4" data-aos="fade-left" suppressHydrationWarning>
                         <div className="bg-gradient-to-br from-[var(--bg-dark)] to-[var(--accent)] p-6 rounded-2xl border border-[var(--accent)]">
                             <Calendar className="text-[var(--primary-color)] mb-4" size={32} />
                             <h3 className="text-gray-400 text-sm mb-1">Date</h3>
@@ -128,7 +128,7 @@ const ProjectDetails = () => {
                 </div>
 
                 {/* Gallery Section */}
-                <div className="mb-20" data-aos="fade-up">
+                <div className="mb-20" data-aos="fade-up" suppressHydrationWarning>
                     <div className="relative h-[400px] md:h-[600px] w-full rounded-3xl overflow-hidden mb-4 border border-[var(--accent)]">
                         <Image
                             src={project.gallery ? project.gallery[activeImage] : project.image}
@@ -161,7 +161,7 @@ const ProjectDetails = () => {
                 {/* Content Grid */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {/* Description */}
-                    <div className="lg:col-span-2 space-y-8" data-aos="fade-up">
+                    <div className="lg:col-span-2 space-y-8" data-aos="fade-up" suppressHydrationWarning>
                         <div>
                             <h2 className="text-3xl font-bold font-oswald text-[var(--white-color)] mb-6">
                                 Project Overview
@@ -187,7 +187,7 @@ const ProjectDetails = () => {
                     </div>
 
                     {/* Features List */}
-                    <div data-aos="fade-left">
+                    <div data-aos="fade-left" suppressHydrationWarning>
                         <div className="bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] p-8 rounded-3xl border border-[var(--accent)] sticky top-24">
                             <h3 className="text-2xl font-bold font-oswald text-[var(--white-color)] mb-6">
                                 Key Features

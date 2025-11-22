@@ -17,7 +17,7 @@ const ContactForm = () => {
     return (
         <div className="py-10 flex flex-col items-center relative">
             <div className="overflow-y-hidden w-full text-center ">
-                <h1 data-aos="fade-up" className="font-medium  text-5xl md:text-6xl">
+                <h1 data-aos="fade-up" className="font-medium text-5xl md:text-6xl" suppressHydrationWarning>
                     Contact Me
                 </h1>
             </div>
@@ -27,6 +27,7 @@ const ContactForm = () => {
                 <div
                     data-aos="fade-right"
                     className="flex flex-col gap-8"
+                    suppressHydrationWarning
                 >
                     <div className="space-y-4">
                         <h3 className="text-3xl font-bold font-oswald text-[var(--white-color)]">
@@ -77,6 +78,7 @@ const ContactForm = () => {
                 <div
                     data-aos="fade-left"
                     className="bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] p-8 rounded-2xl border border-[var(--accent)] relative overflow-hidden"
+                    suppressHydrationWarning
                 >
                     {/* Background Gradient */}
                     <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--primary-color)] opacity-10 blur-[50px] rounded-full pointer-events-none"></div>

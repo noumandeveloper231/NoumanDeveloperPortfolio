@@ -6,6 +6,7 @@ import TypedText from './components/reusable/TypedText';
 import Clients from './components/sections/Clients';
 import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
+import ContactMe from './components/sections/ContactMe';
 
 // UI icons (from lucide-react)
 import { ArrowUpRight, ExternalLink } from "lucide-react";
@@ -17,7 +18,6 @@ import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube, } from "react-icons/fa";
 import Image from 'next/image';
 import Link from 'next/link';
 import Services from './components/sections/Services';
-import ContactMe from './components/sections/ContactMe';
 
 const Home = () => {
   return (
