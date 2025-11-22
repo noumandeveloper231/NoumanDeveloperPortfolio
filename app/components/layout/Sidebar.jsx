@@ -29,7 +29,7 @@ const Sidebar = () => {
             {/* Trigger Button - Visible only on mobile */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="md:hidden fixed top-1/2 left-0 -translate-y-1/2 p-2 text-[var(--white-color)] hover:text-[var(--primary-color)] transition-colors z-999"
+                className="md:hidden fixed top-1/2 -left-1 -translate-y-1/2 p-2 text-[var(--white-color)] hover:text-[var(--primary-color)] transition-colors z-999"
                 aria-label="Open Menu"
             >
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
