@@ -38,7 +38,7 @@ const Home = () => {
           </span></h2>
           <div className='flex flex-col md:flex-row justify-center lg:justify-start  mt-8 items-center gap-4'>
             <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
-              Hire Me <ArrowUpRight className="text-[var(--white-color)] transition-transform group-hover:translate-x-1" />
+              Hire Me <ArrowUpRight className="text-white transition-transform group-hover:translate-x-1" />
             </button>
             <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
               View Projects <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />

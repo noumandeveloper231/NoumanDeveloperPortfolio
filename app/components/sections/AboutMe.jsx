@@ -44,7 +44,7 @@ const AboutMe = () => {
                     <div data-aos="fade-up" data-aos-delay="200" className="flex flex-col md:flex-row flex-wrap gap-4">
                         <Link href="/about" className="">
                             <button className="w-full md:w-auto flex items-center gap-2 justify-center md:justify-start">
-                                More About Me <ArrowUpRight className="text-[var(--white-color)] transition-transform group-hover:translate-x-1" />
+                                More About Me <ArrowUpRight className="text-white transition-transform group-hover:translate-x-1" />
                             </button>
                         </Link>
 
