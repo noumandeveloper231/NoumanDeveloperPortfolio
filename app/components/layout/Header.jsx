@@ -23,13 +23,14 @@ const Header = () => {
   return (
     <header className='w-full flex justify-between py-4 md:py-8 px-4 md:px-8 items-center'>
       <Link href={'/'}>
-        <Image
-          src="/favicon.png"
-          alt="Logo"
-          width={160}
-          height={120}
-          className="w-40 md:w-52"
-        />
+        <div className="relative w-40 md:w-52 h-8 md:h-10">
+          <Image
+            src="/favicon.png"
+            alt="Logo"
+            fill
+            className="object-contain"
+          />
+        </div>
 
       </Link>
       <div className='hidden md:block'>
