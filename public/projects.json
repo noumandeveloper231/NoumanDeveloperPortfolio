@@ -61,5 +61,40 @@
         "githubLink": "https://github.com/nouman-dev/yt-to-mp3-converter",
         "date": "October 2025",
         "client": "Converter Box"
+    },
+    {
+        "id": 3,
+        "title": "Wristyle: Trendy Accessories, Showcasing My E-Commerce Skills",
+        "category": "E-Commerce Store",
+        "shortDescription": "A trendy accessories store showcasing my e-commerce skills.",
+        "fullDescription": "Wristyle is a modern e-commerce platform built with the MERN stack, offering a seamless shopping experience. Features include a fully functional cart, wishlist, secure user authentication with Clerk, real-time order tracking, and a responsive design. The admin panel allows complete control over products, orders, and users, making Wristyle a full-fledged MERN stack e-commerce solution.",
+        "image": "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060149/Capture_-_1_yexqbu.png",
+        "gallery": [
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060149/Capture_-_1_yexqbu.png",
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060148/Capture_-_2_bh0zka.png",
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060148/Capture_-_10_jrpwvq.png",
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060148/Capture_-_11_-_add_to_cart_nf2ayv.png",
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060147/Capture_-_13_-_Admin_Panel_fzuwim.png",
+            "https://res.cloudinary.com/dzmv2otwc/image/upload/v1764060146/Capture_-_12_Order_Page_yurfzn.png"
+        ],
+        "video": "https://res.cloudinary.com/dzmv2otwc/video/upload/v1764060236/Wristyle_Intro_hqihvz.mp4",
+        "tech": [
+            "Next.js",
+            "Node.js",
+            "TailwindCSS",
+            "E-Commerce Funtionality",
+            "Clerk Authentication"
+        ],
+        "features": [
+            "Fully Functional Cart",
+            "Wishlist",
+            "Secure User Authentication",
+            "Real-time Order Tracking",
+            "Responsive Design"
+        ],
+        "liveLink": "https://wristyle.vercel.app//",
+        "githubLink": "https://github.com/nouman-dev/wristyle",
+        "date": "November 2025",
+        "client": "Wristyle"
     }
 ]
