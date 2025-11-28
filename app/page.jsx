@@ -22,9 +22,6 @@ import Services from './components/sections/Services';
 const Home = () => {
   return (
     <main className='max-w-7xl mx-auto w-full relative min-h-screen text-[var(--white-color)]'>
-      <a href="mailto:nt50616849@gmail.com">Email Me</a>
-<a href="tel:+923286960243">Call Me</a>
-
       <section className="w-[90%] mx-auto py-20 px-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div
           data-aos='fade-right'
