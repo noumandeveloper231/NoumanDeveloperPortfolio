@@ -36,14 +36,14 @@ const Home = () => {
           <h2 className='flex text-xl md:text-2xl justify-center lg:justify-start w-full font-light mt-4'>Experties in <span className='text-[var(--primary-color)] underline ml-2 underline-offset-8 font-semibold'>
             <TypedText strings={["React.js", "MongoDB", "HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "TailwindCSS"]} />
           </span></h2>
-          <div className='flex w-full flex-col md:flex-row justify-center lg:justify-start mt-8 items-center gap-4'>
-            <Link href='/contact' className='w-full flex-1 md:w-auto'>
-              <button className='w-full justify-center md:justify-start flex items-center gap-2'>
+          <div className='flex w-full md:w-auto flex-col md:flex-row justify-center lg:justify-start mt-8 items-center gap-4'>
+            <Link href='/contact' className='w-full md:w-auto'>
+              <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
                 Hire Me <ArrowUpRight className="text-white transition-transform group-hover:translate-x-1" />
               </button>
             </Link>
-            <Link href='/projects' className='w-full flex-1 md:w-auto'>
-              <button className='w-full justify-center md:justify-start btn-secondary flex items-center gap-2'>
+            <Link href='/projects' className='w-full md:w-auto'>
+              <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
                 View Projects <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />
               </button>
             </Link>
