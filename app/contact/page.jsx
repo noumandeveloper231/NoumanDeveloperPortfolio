@@ -77,26 +77,26 @@ const ContactForm = () => {
 
           <div className="space-y-6">
             {/* Email */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] hover:border-[var(--primary-color)] transition-all duration-300 group">
+            <a href='mailto:nt50616849@gmail.com' className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] hover:border-[var(--primary-color)] transition-all duration-300 group">
               <div className="w-12 h-12 rounded-lg bg-[rgba(173,70,255,0.1)] flex items-center justify-center text-[var(--primary-color)] group-hover:scale-110 transition-transform">
                 <Mail size={24} />
               </div>
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p className="text-[var(--white-color)] font-medium">contact@nouman.dev</p>
+                <p className="text-[var(--white-color)] font-medium">nt50616849@gmail.com</p>
               </div>
-            </div>
+            </a>
 
             {/* Phone */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] hover:border-[var(--primary-color)] transition-all duration-300 group">
+            <a href='tel:+923286960243' className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] hover:border-[var(--primary-color)] transition-all duration-300 group">
               <div className="w-12 h-12 rounded-lg bg-[rgba(173,70,255,0.1)] flex items-center justify-center text-[var(--primary-color)] group-hover:scale-110 transition-transform">
                 <Phone size={24} />
               </div>
               <div>
                 <p className="text-sm text-gray-400">Phone</p>
-                <p className="text-[var(--white-color)] font-medium">+92 300 1234567</p>
+                <p className="text-[var(--white-color)] font-medium">+92 328 6960243</p>
               </div>
-            </div>
+            </a>
 
             {/* Location */}
             <div className="flex items-center gap-4 p-4 rounded-xl bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] hover:border-[var(--primary-color)] transition-all duration-300 group">

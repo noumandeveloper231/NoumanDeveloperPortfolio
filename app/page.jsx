@@ -22,6 +22,9 @@ import Services from './components/sections/Services';
 const Home = () => {
   return (
     <main className='max-w-7xl mx-auto w-full relative min-h-screen text-[var(--white-color)]'>
+      <a href="mailto:nt50616849@gmail.com">Email Me</a>
+<a href="tel:+923286960243">Call Me</a>
+
       <section className="w-[90%] mx-auto py-20 px-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div
           data-aos='fade-right'
@@ -37,12 +40,16 @@ const Home = () => {
             <TypedText strings={["React.js", "MongoDB", "HTML5", "CSS3", "JavaScript", "Node.js", "Express.js", "TailwindCSS"]} />
           </span></h2>
           <div className='flex flex-col md:flex-row justify-center lg:justify-start  mt-8 items-center gap-4'>
-            <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
-              Hire Me <ArrowUpRight className="text-white transition-transform group-hover:translate-x-1" />
-            </button>
-            <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
-              View Projects <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />
-            </button>
+            <Link href='/contact'>
+              <button className='w-full md:w-auto justify-center md:justify-start flex items-center gap-2'>
+                Hire Me <ArrowUpRight className="text-white transition-transform group-hover:translate-x-1" />
+              </button>
+            </Link>
+            <Link href='/projects'>
+              <button className='w-full md:w-auto justify-center md:justify-start btn-secondary flex items-center gap-2'>
+                View Projects <ArrowUpRight className="text-[var(--primary-color)] transition-transform group-hover:translate-x-1" />
+              </button>
+            </Link>
           </div>
           <div className='flex items-center justify-center lg:justify-start flex-wrap mt-2 gap-4'>
             <div
