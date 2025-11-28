@@ -46,6 +46,8 @@ const DynamicBar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
+
     return (
         <div data-aos="fade-up" className='fixed left-1/2 top-5 -translate-x-1/2 z-50'>
             <nav
@@ -63,23 +65,21 @@ const DynamicBar = () => {
                 <ul className={`flex gap-6 duration-800 ${pop && "md:opacity-0 hover:opacity-100"}`}>
                     {NavLinks.map((item, index) => (
                         <li key={index} className="group transition-all">
-                            <Link
-                                href={item.link}
-                                className="flex items-center gap-4"
-                            >
+                            <Link href={item.link} className="flex items-center gap-4 hover-underline-left">
                                 <div
-                                    className={`group relative px-2 py-1 font-medium transition-all duration-300 ease-in-out flex items-center gap-4 ${pathname === item.link
-                                        ? "text-[var(--primary-color)] font-semibold"
-                                        : "text-[var(--white-color)]"
+                                    className={`group relative px-2 py-1 font-medium flex items-center gap-4 transition-all duration-300 ease-in-out ${pathname === item.link ? "text-[var(--primary-color)] font-semibold" : "text-[var(--white-color)]"
                                         }`}
                                 >
                                     {item.name}
                                     <span
-                                        className={`absolute left-0 bottom-0 h-0.5 bg-[var(--primary-color)] transition-all duration-300 ease-in-out ${pathname === item.link ? "w-full" : "w-0 group-hover:w-full"
+                                        className={`absolute w-full left-0 bottom-0 h-0.5 bg-[var(--primary-color)] transition-transform duration-300 ease-in-out ${pathname === item.link
+                                                ? "scale-x-100 origin-left"
+                                                : "scale-x-0"
                                             }`}
                                     />
                                 </div>
                             </Link>
+
                         </li>
                     ))}
                     <li className='flex items-center gap-2'>

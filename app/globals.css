@@ -30,6 +30,23 @@ body {
   --dark-to: #2d2d2d;
 }
 
+.hover-underline-left {
+  @apply relative inline-block;
+}
+
+.hover-underline-left::after {
+  content: '';
+  @apply absolute left-0 bottom-0 w-full h-[2px] bg-[var(--primary-color)];
+  transform: scaleX(0);
+  transform-origin: bottom right; 
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-left:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 .light-mode {
   --primary-color: #ad46ff;
   /* Keep purple */
@@ -82,17 +99,17 @@ body {
   overflow-x: hidden;
   background-color: var(--bg);
 }
-  
+
 button {
-  @apply py-2 px-4 rounded-md bg-[var(--primary-color)] border border-transparent text-white cursor-pointer font-medium text-[clamp(0.75rem,0.9vw,1rem)] transition-all duration-300 ease-in-out;
+  @apply py-2 px-4 rounded-md bg-[var(--primary-color)] border border-transparent text-white cursor-pointer font-medium transition-all duration-300 ease-in-out;
 }
 
 button:hover {
-  @apply bg-[#6f0f9bad] shadow-[5px_5px_10px_rgba(128,128,128,0.293)] -translate-y-[3px] text-[var(--primary-color)];
+  @apply bg-[#6f0f9bad] -translate-y-[3px];
 }
 
 .btn-secondary {
-  @apply py-2 px-4 rounded-md bg-transparent border border-[var(--primary-color)] cursor-pointer font-medium text-[clamp(0.75rem,0.9vw,1rem)] transition-all duration-300 ease-in-out;
+  @apply py-2 px-4 rounded-md bg-transparent border border-[var(--primary-color)] cursor-pointer font-medium transition-all duration-300 ease-in-out;
   color: var(--white-color);
 }
 

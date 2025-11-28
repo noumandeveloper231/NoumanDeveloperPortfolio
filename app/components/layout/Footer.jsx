@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { Facebook, Twitter, Instagram, Linkedin, Github, Mail, ArrowRight, Heart } from 'lucide-react';
+import { Twitter, Instagram, Linkedin, Github, Mail, ArrowRight, Heart } from 'lucide-react';
+import ThemeLogo from '../reusable/ThemeLogo';
 
 const Footer = () => {
   return (
@@ -9,9 +10,7 @@ const Footer = () => {
 
         {/* Column 1: Brand Info */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="text-3xl font-bold font-oswald text-[var(--white-color)]">
-            
-          </Link>
+          <ThemeLogo />
           <p className="text-gray-400 leading-relaxed">
             Transforming ideas into digital reality. I build accessible, pixel-perfect, and performant web experiences.
           </p>

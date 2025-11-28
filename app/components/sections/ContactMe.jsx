@@ -2,6 +2,8 @@
 import React, { useEffect, useState, Suspense } from 'react';
 import { Mail, Phone, MapPin, Send, User, MessageSquare } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const ContactForm = () => {
     const searchParams = useSearchParams();
@@ -13,6 +15,38 @@ const ContactForm = () => {
             setSubject(subjectParam);
         }
     }, [searchParams]);
+
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+
+        // Show a loading toast and get its ID
+        const toastId = toast.loading("Sending message...");
+
+        emailjs.sendForm('service_55e2di4', 'template_u23o66n', form, publicKey)
+            .then(() => {
+                // Update the existing toast to success
+                toast.update(toastId, {
+                    render: "Message sent! .",
+                    type: "success",
+                    isLoading: false,
+                    closeButton: true,
+                });
+                form.reset();
+            })
+            .catch(() => {
+                // Update the existing toast to error
+                toast.update(toastId, {
+                    render: "Message not sent! Please try again.",
+                    type: "error",
+                    isLoading: false,
+                    closeButton: true,
+                });
+            });
+    };
+
 
     return (
         <div className="py-10 flex flex-col items-center relative">
@@ -83,13 +117,14 @@ const ContactForm = () => {
                     {/* Background Gradient */}
                     <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--primary-color)] opacity-10 blur-[50px] rounded-full pointer-events-none"></div>
 
-                    <form action="#" className="flex flex-col gap-6 relative z-10">
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-6 relative z-10">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label className="text-sm text-gray-400 ml-1">Name</label>
                                 <div className="relative">
                                     <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
                                     <input
+                                        name='name'
                                         type="text"
                                         placeholder="John Doe"
                                         className="w-full bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] rounded-xl py-3 pl-12 pr-4 text-[var(--white-color)] focus:outline-none focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] transition-all"
@@ -101,6 +136,7 @@ const ContactForm = () => {
                                 <div className="relative">
                                     <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
                                     <input
+                                        name='email'
                                         type="email"
                                         placeholder="john@example.com"
                                         className="w-full bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] rounded-xl py-3 pl-12 pr-4 text-[var(--white-color)] focus:outline-none focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] transition-all"
@@ -114,6 +150,7 @@ const ContactForm = () => {
                             <div className="relative">
                                 <MessageSquare className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
                                 <input
+                                    name='title'
                                     type="text"
                                     placeholder="Project Inquiry"
                                     value={subject}
@@ -126,9 +163,10 @@ const ContactForm = () => {
                         <div className="space-y-2">
                             <label className="text-sm text-gray-400 ml-1">Message</label>
                             <textarea
+                                name="message"
                                 rows="4"
                                 placeholder="Tell me about your project..."
-                                className="w-full bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] rounded-xl py-3 px-4 text-[var(--white-color)] focus:outline-none focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] transition-all resize-none"
+                                className="w-full bg-gradient-to-br from-[var(--dark-from)] to-[var(--dark-to)] border border-[var(--accent)] rounded-xl py-3 pl-4 pr-4 text-[var(--white-color)] focus:outline-none focus:border-[var(--primary-color)] focus:ring-1 focus:ring-[var(--primary-color)] transition-all resize-none"
                             ></textarea>
                         </div>
 

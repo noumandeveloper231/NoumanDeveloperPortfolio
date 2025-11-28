@@ -47,9 +47,9 @@
         "tech": [
             "Next.js",
             "Node.js",
-            "TailwindCSS",
             "Api Integration",
-            "Rapid API"
+            "Rapid API",
+            "TailwindCSS"
         ],
         "features": [
             "YouTube to MP3 Conversion",
@@ -64,7 +64,7 @@
     },
     {
         "id": 3,
-        "title": "Wristyle: Trendy Accessories, Showcasing My E-Commerce Skills",
+        "title": "Wristyle",
         "category": "E-Commerce Store",
         "shortDescription": "A trendy accessories store showcasing my e-commerce skills.",
         "fullDescription": "Wristyle is a modern e-commerce platform built with the MERN stack, offering a seamless shopping experience. Features include a fully functional cart, wishlist, secure user authentication with Clerk, real-time order tracking, and a responsive design. The admin panel allows complete control over products, orders, and users, making Wristyle a full-fledged MERN stack e-commerce solution.",

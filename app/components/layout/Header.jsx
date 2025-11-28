@@ -1,38 +1,13 @@
-'use client';
-import { useState, useEffect } from 'react';
-
-import Image from 'next/image'
 import Link from 'next/link'
 import DynamicBar from './DynamicBar'
 import { ArrowUpRight } from 'lucide-react'
 import Sidebar from './Sidebar'
+import ThemeLogo from '../reusable/ThemeLogo'
 
 const Header = () => {
-  const [pop, setPop] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 200) setPop(true);
-      else setPop(false);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <header className='w-full flex justify-between py-4 md:py-8 px-4 md:px-8 items-center'>
-      <Link href={'/'}>
-        <div className="relative w-40 md:w-52 h-8">
-          <Image
-            src="/favicon.png"
-            alt="Logo"
-            fill
-            className="object-contain"
-          />
-        </div>
-
-      </Link>
+      <ThemeLogo />
       <div className='hidden md:block'>
         <DynamicBar />
       </div>
